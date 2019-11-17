@@ -1,8 +1,6 @@
 build:
-	docker-compose exec golang go build
+	docker-compose run --rm golang go build
 exec:
-	docker-compose exec golang ./app
-up:
-	docker-compose up -d
+	docker-compose run --rm golang ./app
 run:
-	docker-compose exec golang go run main.go
+	docker-compose run --rm golang go run main.go
